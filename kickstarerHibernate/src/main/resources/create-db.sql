@@ -1,0 +1,1 @@
+CREATE TABLE quotes (id INTEGER PRIMARY KEY, quote varchar(255))
