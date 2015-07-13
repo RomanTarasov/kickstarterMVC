@@ -2,6 +2,8 @@ package ua.goit.kickstarter;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -12,7 +14,6 @@ import ua.goit.kickstarter.dao.ProjectDao;
 import ua.goit.kickstarter.dao.entities.Category;
 import ua.goit.kickstarter.dao.entities.Project;
 
-
 public class ProjectDaoTest {
 	ApplicationContext app;
 	ProjectDao projectDao;
@@ -21,8 +22,8 @@ public class ProjectDaoTest {
 	public void setUp() {
 		app = new ClassPathXmlApplicationContext("root-context.xml");
 		projectDao = (ProjectDao) app.getBean("projectDaoImpl");
-//		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
-//		 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
+		// org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
+		// "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
 
 	}
 
@@ -36,6 +37,13 @@ public class ProjectDaoTest {
 		Project stored = projectDao.getById((long) 90);
 		assertEquals(project.getName(), stored.getName());
 
+	}
+
+	@Test
+	public void getProjectsByCategory_Test() {
+		Category category = new Category();
+		category.setId((long) 5);
+		List<Project> projects = projectDao.getProjectsByCategory(category);
 	}
 
 }

@@ -18,6 +18,10 @@
   <property column="pledged" name="pledged" type="double"/>
   <property column="theEndDay" name="theEndDay" type="integer"/>
   <property column="invest_options" name="investmentOptions" type="string"/>
-  <property column="amountsForInvest" name="amount" type="double"/>
+  <array name="amount">
+   <key/>
+   <index/>
+   <element column="amountsForInvest" type="double"/>
+  </array>
  </class>
 </hibernate-mapping>
