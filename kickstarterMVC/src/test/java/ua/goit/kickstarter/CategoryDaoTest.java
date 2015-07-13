@@ -22,8 +22,8 @@ public class CategoryDaoTest {
 	public void setUp() {
 		app = new ClassPathXmlApplicationContext("root-context.xml");
 		categoryDao = (CategoryDao) app.getBean("categoryDaoImpl");
-		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
-		 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
+//		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
+//		 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
 
 	}
 

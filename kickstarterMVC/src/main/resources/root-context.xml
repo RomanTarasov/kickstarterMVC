@@ -28,16 +28,19 @@
 	<bean id="mySessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="embeddedDataSource" />
-		<property name="annotatedClasses">
-			<list>
-				<value>ua.goit.kickstarter.dao.entities.Project</value>
-			</list>
+		<property name="configLocation">
+			<value>classpath:hibernate/hibernate.cfg.xml</value>
 		</property>
+<!-- 		<property name="annotatedClasses"> -->
+<!-- 			<list> -->
+<!-- 				<value>ua.goit.kickstarter.dao.entities.Project</value> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
 		<property name="mappingResources">
 			<list>
-
 				<value>hibernate/Quote.hbm.xml</value>
 				<value>hibernate/Category.hbm.xml</value>
+				<value>hibernate/Project.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

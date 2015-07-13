@@ -1,19 +1,11 @@
 package ua.goit.kickstarter.dao.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
-
-
-@Entity
-@Table(name = "projects")
+//@Entity
+//@Table(name = "projects")
 public class Project {
-	@Id
-	@GeneratedValue
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	public Long getId() {
@@ -24,57 +16,57 @@ public class Project {
 		this.id = id;
 	}
 
-	@ManyToOne
-	private Category category;
+//	@ManyToOne
+//	private Category category;
 
-	@Column(name = "name")
+//	@Column(name = "name")
 	private String name;
 
-	@Column(name = "description")
+//	@Column(name = "description")
 	private String description;
 
-	@Column(name = "short_description")
+//	@Column(name = "short_description")
 	private String shortDescription;
 
-	@Column(name = "history")
+//	@Column(name = "history")
 	private String history;
 
-	@Column(name = "goal")
-	private int goal;
+//	@Column(name = "goal")
+	private double goal;
 
-	@Column(name = "pledged")
+//	@Column(name = "pledged")
 	private double pledged;
 
-	@Column(name = "theEndDay")
+//	@Column(name = "theEndDay")
 	private int theEndDay;
 
-	@Column(name = "link")
+//	@Column(name = "link")
 	private String link;
 
-	@Column(name = "investmentOptions")
+//	@Column(name = "invest_options")
 	private String[] investmentOptions;
 
-	@Column(name = "amountsForInvest")
+//	@Column(name = "amountsForInvest")
 	private Double[] amount;
 	
-	@Column(name = "category_id")
-	private int categoryId;
+//	@Column(name = "category_id")
+	private Long categoryId;
 
-	public int getCategoryId() {
+	public Long getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(int categoryId) {
+	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 	}
 
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
-	}
+//	public Category getCategory() {
+//		return category;
+//	}
+//
+//	public void setCategory(Category category) {
+//		this.category = category;
+//	}
 
 	public String getName() {
 		return name;
@@ -108,11 +100,11 @@ public class Project {
 		this.history = history;
 	}
 
-	public int getGoal() {
+	public double getGoal() {
 		return goal;
 	}
 
-	public void setGoal(int goal) {
+	public void setGoal(double goal) {
 		this.goal = goal;
 	}
 

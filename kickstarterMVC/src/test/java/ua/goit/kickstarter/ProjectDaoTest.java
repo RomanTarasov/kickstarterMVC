@@ -12,6 +12,7 @@ import ua.goit.kickstarter.dao.ProjectDao;
 import ua.goit.kickstarter.dao.entities.Category;
 import ua.goit.kickstarter.dao.entities.Project;
 
+
 public class ProjectDaoTest {
 	ApplicationContext app;
 	ProjectDao projectDao;
@@ -20,8 +21,8 @@ public class ProjectDaoTest {
 	public void setUp() {
 		app = new ClassPathXmlApplicationContext("root-context.xml");
 		projectDao = (ProjectDao) app.getBean("projectDaoImpl");
-		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
-		 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
+//		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
+//		 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
 
 	}
 

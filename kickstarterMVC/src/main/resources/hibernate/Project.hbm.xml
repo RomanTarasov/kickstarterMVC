@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13.07.2015 2:39:55 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="ua.goit.kickstarter.dao.entities.Project" table="projects">
+  <id access="field" name="id" type="java.lang.Long">
+   <column name="ID"/>
+   <generator class="assigned"/>
+  </id>
+  <property column="name" name="name" type="string"/>
+  <property column="description" name="description" type="string"/>
+  <property column="short_description" name="shortDescription" type="string"/>
+  <property column="history" name="history" type="string"/>
+  <property column="link" name="link" type="string"/>
+  <property column="category_id" name="categoryId" type="long"/>
+  <property column="goal" name="goal" type="double"/>
+  <property column="pledged" name="pledged" type="double"/>
+  <property column="theEndDay" name="theEndDay" type="integer"/>
+  <property column="invest_options" name="investmentOptions" type="string"/>
+  <property column="amountsForInvest" name="amount" type="double"/>
+ </class>
+</hibernate-mapping>

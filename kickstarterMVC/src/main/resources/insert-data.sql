@@ -13,5 +13,6 @@ ARRAY['1$ -','10$ -','40$ -'],
 'short description',
 'history of bike creation',
 5,
+10000,
 ARRAY[  1,  10,  40 ]);
 

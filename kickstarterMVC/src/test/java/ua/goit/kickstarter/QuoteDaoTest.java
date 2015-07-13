@@ -20,8 +20,8 @@ public class QuoteDaoTest {
 	public void setUp() {
 		app = new ClassPathXmlApplicationContext("root-context.xml");
 		quoteDao = (QuoteDao) app.getBean("quoteDaoImpl");
-		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
-				 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
+//		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
+//				 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
 
 
 	}
