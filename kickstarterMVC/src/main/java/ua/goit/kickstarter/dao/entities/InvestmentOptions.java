@@ -1,7 +1,7 @@
 package ua.goit.kickstarter.dao.entities;
 
 public class InvestmentOptions {
-	Double pay;
-	String description;
-	Long project_id;
+	private Double pay;
+	private String description;
+	private Long project_id;
 }

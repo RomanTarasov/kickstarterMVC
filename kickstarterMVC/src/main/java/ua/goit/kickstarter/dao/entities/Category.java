@@ -1,6 +1,5 @@
 package ua.goit.kickstarter.dao.entities;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,8 +19,6 @@ public class Category {
 
 	@Column(name = "name")
 	private String name;
-
-
 
 	public String getName() {
 		return name;

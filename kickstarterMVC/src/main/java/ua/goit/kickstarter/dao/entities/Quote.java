@@ -9,19 +9,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "quotes")
 public class Quote {
+	public Quote() {
+	}
+	
 	@Id
 	@GeneratedValue
 	private Long id;
-	
-	@Column(name="text")
+
+	@Column(name = "text")
 	private String text;
-	
-	@Column(name="author")
+
+	@Column(name = "author")
 	private String author;
 
-	public Quote() {
 
-	}
 
 	public String getText() {
 		return text;

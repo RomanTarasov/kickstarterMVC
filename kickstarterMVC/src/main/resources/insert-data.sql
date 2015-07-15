@@ -1,4 +1,6 @@
 
+INSERT INTO users VALUES (1,'user','pass')
+INSERT INTO comments VALUES (1,'ok',0,1,1)
 INSERT INTO quotes VALUES (8,'Explore projects, everywhere','author');
 INSERT INTO quotes VALUES (4,'Each and every Kickstarter project is the independent creation of someone like you','author2');
 INSERT INTO categories VALUES (5,'Technology');

@@ -14,41 +14,42 @@ public class Project {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Category category;
-	
-	@Column(name="name")
+
+	@Column(name = "name")
 	private String name;
-	
-	@Column(name="description")
+
+	@Column(name = "description")
 	private String description;
-	
-	@Column(name="short_description")
+
+	@Column(name = "short_description")
 	private String shortDescription;
-	
-	@Column(name="history")
+
+	@Column(name = "history")
 	private String history;
-	
-	@Column(name="goal")
+
+	@Column(name = "goal")
 	private Double goal;
-	
-	@Column(name="pledged")
+
+	@Column(name = "pledged")
 	private Double pledged;
-	
-	@Column(name="theEndDay")
+
+	@Column(name = "theEndDay")
 	private Integer theEndDay;
-	
-	@Column(name="link")
+
+	@Column(name = "link")
 	private String link;
-	
-	@Column(name="status")
+
+	@Column(name = "status")
 	private Integer status;
- 
-	public Long getCategoryId(){
+
+	public Long getCategoryId() {
 		return category.getId();
 	}
+
 	public Long getId() {
 		return id;
 	}
