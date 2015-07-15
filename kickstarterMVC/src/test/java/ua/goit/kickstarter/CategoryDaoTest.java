@@ -34,7 +34,7 @@ public class CategoryDaoTest {
 		category.setName("one category");
 		category.setId((long) 90);
 		categoryDao.create(category);
-		Category stored = categoryDao.getById((long) 90);
+		Category stored = categoryDao.getById((long) 6);
 		assertEquals(category.getName(), stored.getName());
 
 	}

@@ -7,12 +7,11 @@ INSERT INTO projects VALUES (1,
 'Create electrobike',
 5,
 0,
-ARRAY['1$ -','10$ -','40$ -'],
 'www.link.to.demo.video',
 'high efficiency',
 'short description',
 'history of bike creation',
 5,
-10000,
-ARRAY[  1,  10,  40 ]);
+10000
+);
 

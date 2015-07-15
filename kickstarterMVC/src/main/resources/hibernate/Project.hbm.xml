@@ -8,20 +8,20 @@
    <column name="ID"/>
    <generator class="assigned"/>
   </id>
-  <property column="name" name="name" type="string"/>
-  <property column="description" name="description" type="string"/>
-  <property column="short_description" name="shortDescription" type="string"/>
-  <property column="history" name="history" type="string"/>
-  <property column="link" name="link" type="string"/>
-  <property column="category_id" name="categoryId" type="long"/>
-  <property column="goal" name="goal" type="double"/>
-  <property column="pledged" name="pledged" type="double"/>
-  <property column="theEndDay" name="theEndDay" type="integer"/>
-  <property column="invest_options" name="investmentOptions" type="string"/>
-  <array name="amount">
-   <key/>
-   <index/>
-   <element column="amountsForInvest" type="double"/>
-  </array>
+  <property column="category_id" generated="never" lazy="false"
+   name="categoryId" type="long"/>
+  <property column="name" generated="never" lazy="false" name="name" type="string"/>
+  <property column="description" generated="never" lazy="false"
+   name="description" type="string"/>
+  <property column="short_description" generated="never" lazy="false"
+   name="shortDescription" type="string"/>
+  <property column="history" generated="never" lazy="false"
+   name="history" type="string"/>
+  <property column="link" generated="never" lazy="false" name="link" type="string"/>
+  <property column="goal" generated="never" lazy="false" name="goal" type="double"/>
+  <property column="pledged" generated="never" lazy="false"
+   name="pledged" type="double"/>
+  <property column="theEndDay" generated="never" lazy="false"
+   name="theEndDay" type="integer"/>
  </class>
 </hibernate-mapping>

@@ -10,7 +10,7 @@
 	<context:component-scan base-package="ua.goit"
 		annotation-config="true">
 	</context:component-scan>
-	<context:annotation-config />
+
 	<tx:annotation-driven />
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
@@ -28,6 +28,7 @@
 	<bean id="mySessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="embeddedDataSource" />
+	<property name="packagesToScan" value="ua.goit" />
 		<property name="configLocation">
 			<value>classpath:hibernate/hibernate.cfg.xml</value>
 		</property>
@@ -39,16 +40,16 @@
 		<property name="mappingResources">
 			<list>
 				<value>hibernate/Quote.hbm.xml</value>
-				<value>hibernate/Category.hbm.xml</value>
+<!-- 				<value>hibernate/Category.hbm.xml</value> -->
 				<value>hibernate/Project.hbm.xml</value>
 			</list>
 		</property>
-		<property name="hibernateProperties">
+<!-- 		<property name="hibernateProperties"> -->
 
-			<value>
-				hibernate.dialect=org.hibernate.dialect.HSQLDialect
-			</value>
-		</property>
+<!-- 			<value> -->
+<!-- 				hibernate.dialect=org.hibernate.dialect.HSQLDialect -->
+<!-- 			</value> -->
+<!-- 		</property> -->
 
 
 	</bean>

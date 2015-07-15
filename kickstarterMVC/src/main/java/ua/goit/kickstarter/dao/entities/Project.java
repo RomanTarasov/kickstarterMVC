@@ -1,13 +1,27 @@
 package ua.goit.kickstarter.dao.entities;
 
-
-//@Entity
-//@Table(name = "projects")
 public class Project {
-//	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
+
 	private Long id;
-	
+	private Long categoryId;
+	private String name;
+	private String description;
+	private String shortDescription;
+	private String history;
+	private Double goal;
+	private Double pledged;
+	private Integer theEndDay;
+	private String link;
+	private Integer status;
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -16,42 +30,6 @@ public class Project {
 		this.id = id;
 	}
 
-//	@ManyToOne
-//	private Category category;
-
-//	@Column(name = "name")
-	private String name;
-
-//	@Column(name = "description")
-	private String description;
-
-//	@Column(name = "short_description")
-	private String shortDescription;
-
-//	@Column(name = "history")
-	private String history;
-
-//	@Column(name = "goal")
-	private double goal;
-
-//	@Column(name = "pledged")
-	private double pledged;
-
-//	@Column(name = "theEndDay")
-	private int theEndDay;
-
-//	@Column(name = "link")
-	private String link;
-
-//	@Column(name = "invest_options")
-	private String[] investmentOptions;
-
-//	@Column(name = "amountsForInvest")
-	private Double[] amount;
-	
-//	@Column(name = "category_id")
-	private Long categoryId;
-
 	public Long getCategoryId() {
 		return categoryId;
 	}
@@ -59,14 +37,6 @@ public class Project {
 	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 	}
-
-//	public Category getCategory() {
-//		return category;
-//	}
-//
-//	public void setCategory(Category category) {
-//		this.category = category;
-//	}
 
 	public String getName() {
 		return name;
@@ -104,7 +74,7 @@ public class Project {
 		return goal;
 	}
 
-	public void setGoal(double goal) {
+	public void setGoal(Double goal) {
 		this.goal = goal;
 	}
 
@@ -112,7 +82,7 @@ public class Project {
 		return pledged;
 	}
 
-	public void setPledged(double pledged) {
+	public void setPledged(Double pledged) {
 		this.pledged = pledged;
 	}
 
@@ -120,7 +90,7 @@ public class Project {
 		return theEndDay;
 	}
 
-	public void setTheEndDay(int theEndDay) {
+	public void setTheEndDay(Integer theEndDay) {
 		this.theEndDay = theEndDay;
 	}
 
@@ -132,19 +102,4 @@ public class Project {
 		this.link = link;
 	}
 
-	public String[] getInvestmentOptions() {
-		return investmentOptions;
-	}
-
-	public void setInvestmentOptions(String[] investmentOptions) {
-		this.investmentOptions = investmentOptions;
-	}
-
-	public Double[] getAmount() {
-		return amount;
-	}
-
-	public void setAmount(Double[] amount) {
-		this.amount = amount;
-	}
 }

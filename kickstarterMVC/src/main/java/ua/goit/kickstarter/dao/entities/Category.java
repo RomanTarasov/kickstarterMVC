@@ -4,21 +4,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import org.hibernate.annotations.Table;
+import javax.persistence.Table;
 
 @Entity
-@Table(appliesTo = "categories")
+@Table(name = "categories")
 public class Category {
 	public Category() {
 	}
 
 	@Id
 	@GeneratedValue
+	@Column(name="id")
 	private Long id;
 
 	@Column(name = "name")
 	private String name;
-
 
 	public String getName() {
 		return name;
