@@ -39,9 +39,9 @@
 <!-- 		</property> -->
 		<property name="mappingResources">
 			<list>
-				<value>hibernate/Quote.hbm.xml</value>
+<!-- 				<value>hibernate/Quote.hbm.xml</value> -->
 <!-- 				<value>hibernate/Category.hbm.xml</value> -->
-				<value>hibernate/Project.hbm.xml</value>
+<!-- 				<value>hibernate/Project.hbm.xml</value> -->
 			</list>
 		</property>
 <!-- 		<property name="hibernateProperties"> -->

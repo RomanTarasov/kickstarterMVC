@@ -22,8 +22,8 @@ public class ProjectDaoTest {
 	public void setUp() {
 		app = new ClassPathXmlApplicationContext("root-context.xml");
 		projectDao = (ProjectDao) app.getBean("projectDaoImpl");
-		// org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
-		// "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
+//		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
+//		 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
 
 	}
 
@@ -34,7 +34,7 @@ public class ProjectDaoTest {
 		project.setName("one project");
 		project.setId((long) 90);
 		projectDao.create(project);
-		Project stored = projectDao.getById((long) 90);
+		Project stored = projectDao.getById((long) 2);
 		assertEquals(project.getName(), stored.getName());
 
 	}
@@ -44,6 +44,9 @@ public class ProjectDaoTest {
 		Category category = new Category();
 		category.setId((long) 5);
 		List<Project> projects = projectDao.getProjectsByCategory(category);
+		
+		assertEquals("Create electrobike", projects.get(0).getName());
 	}
+	
 
 }

@@ -13,9 +13,10 @@
 	<input type="button" value="main page"
 		onclick="self.location='main';" />
 	<c:forEach var="project" items="${sortedProjects}">
+
 		<h2>
 			<a
-				href="DetailedProject?project=${project.id}&category=${project.categoryId}">
+				href="DetailedProject?project=${project.id}&category=${project.getCategoryId()}">
 				<c:out value="${project.name}" />
 			</a>
 		</h2>

@@ -12,6 +12,30 @@ INSERT INTO projects VALUES (1,
 'short description',
 'history of bike creation',
 5,
-10000
+10000,
+0
 );
-
+INSERT INTO projects VALUES (2,
+'Microduino mCookie',
+5,
+0,
+'https://www.microduino.cc/module/view?id=53da0abdc69eee000055f55d',
+'Small, stackable, Arduino-compatible electronics for makers, designers, engineers, students and curious tinkerers of all ages.',
+'The smallest electronic modules on LEGO',
+'history of Microduino mCookie',
+5000,
+20000,
+40
+);
+INSERT INTO projects VALUES (3,
+'Help Build ACRE,s New Home in Chicago',
+4,
+0,
+'https://www.link',
+'The renovation of our new space and expansion of our Chicago programming!',
+'Help ACRE achieve our most ambitious project to date',
+'history ',
+5000,
+10000,
+40
+);

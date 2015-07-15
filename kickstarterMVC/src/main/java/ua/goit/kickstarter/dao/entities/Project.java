@@ -1,41 +1,60 @@
 package ua.goit.kickstarter.dao.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "projects")
 public class Project {
-
+	@Id
+	@GeneratedValue
 	private Long id;
-	private Long categoryId;
+	
+	@ManyToOne
+	@JoinColumn(name = "category_id")
+	private Category category;
+	
+	@Column(name="name")
 	private String name;
+	
+	@Column(name="description")
 	private String description;
+	
+	@Column(name="short_description")
 	private String shortDescription;
+	
+	@Column(name="history")
 	private String history;
+	
+	@Column(name="goal")
 	private Double goal;
+	
+	@Column(name="pledged")
 	private Double pledged;
+	
+	@Column(name="theEndDay")
 	private Integer theEndDay;
+	
+	@Column(name="link")
 	private String link;
+	
+	@Column(name="status")
 	private Integer status;
-
-	public Integer getStatus() {
-		return status;
+ 
+	public Long getCategoryId(){
+		return category.getId();
 	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Long getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
 	}
 
 	public String getName() {
@@ -70,7 +89,7 @@ public class Project {
 		this.history = history;
 	}
 
-	public double getGoal() {
+	public Double getGoal() {
 		return goal;
 	}
 
@@ -78,7 +97,7 @@ public class Project {
 		this.goal = goal;
 	}
 
-	public double getPledged() {
+	public Double getPledged() {
 		return pledged;
 	}
 
@@ -86,7 +105,7 @@ public class Project {
 		this.pledged = pledged;
 	}
 
-	public int getTheEndDay() {
+	public Integer getTheEndDay() {
 		return theEndDay;
 	}
 
@@ -100,6 +119,14 @@ public class Project {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 
 }

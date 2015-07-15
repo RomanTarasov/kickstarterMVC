@@ -35,7 +35,7 @@ public class QuoteDaoTest {
 		quote.setId((long) 90);
 		
 		quoteDao.create(quote);
-		Quote stored = quoteDao.getById((long) 90);
+		Quote stored = quoteDao.getById((long) 9);
 		assertEquals(quote.getAuthor(), stored.getAuthor());
 	}
 
