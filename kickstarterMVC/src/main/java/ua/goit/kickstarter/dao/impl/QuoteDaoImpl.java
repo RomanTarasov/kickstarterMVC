@@ -1,7 +1,9 @@
-package ua.goit.kickstarter.dao;
+package ua.goit.kickstarter.dao.impl;
 
 import org.hibernate.Session;
 import org.springframework.transaction.annotation.Transactional;
+
+import ua.goit.kickstarter.dao.QuoteDao;
 import ua.goit.kickstarter.dao.entities.Quote;
 
 

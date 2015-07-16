@@ -15,10 +15,10 @@ import ua.goit.kickstarter.dao.entities.Quote;
 public class Main {
 
 	@Autowired
-	QuoteDao quoteDao;
+	private QuoteDao quoteDao;
 
 	@Autowired
-	CategoryDao categoryDao;
+	private CategoryDao categoryDao;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String rootToMain(Model model) {

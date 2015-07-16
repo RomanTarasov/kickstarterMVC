@@ -1,9 +1,12 @@
-package ua.goit.kickstarter.dao;
+package ua.goit.kickstarter.dao.impl;
 
 import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.transaction.annotation.Transactional;
+
+import ua.goit.kickstarter.dao.ProjectDao;
 import ua.goit.kickstarter.dao.entities.Category;
 import ua.goit.kickstarter.dao.entities.Project;
 

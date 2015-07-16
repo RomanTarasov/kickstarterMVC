@@ -1,9 +1,11 @@
-package ua.goit.kickstarter.dao;
+package ua.goit.kickstarter.dao.impl;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+
+import ua.goit.kickstarter.dao.Dao;
 
 @Transactional
 public class AbstractDao<T> implements Dao<T> {

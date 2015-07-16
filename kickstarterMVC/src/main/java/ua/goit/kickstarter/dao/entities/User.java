@@ -15,10 +15,14 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
-	@Column(name="login")
+
+	@Column(name = "login")
 	private String login;
-	
-	@Column(name="password")
+
+	@Column(name = "password")
 	private String password;
+
+	public String getLogin() {
+		return login;
+	}
 }

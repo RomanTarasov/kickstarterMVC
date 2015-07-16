@@ -9,43 +9,31 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import ua.goit.kickstarter.dao.CategoryDao;
+import ua.goit.kickstarter.dao.CommentDao;
 import ua.goit.kickstarter.dao.ProjectDao;
+import ua.goit.kickstarter.dao.QuoteDao;
 import ua.goit.kickstarter.dao.entities.Category;
+import ua.goit.kickstarter.dao.entities.Comment;
 import ua.goit.kickstarter.dao.entities.Project;
 
-public class ProjectDaoTest {
+public class CommentDaoTest {
 	ApplicationContext app;
+	CommentDao commentDao;
 	ProjectDao projectDao;
 
 	@Before
 	public void setUp() {
 		app = new ClassPathXmlApplicationContext("root-context.xml");
+		commentDao = (CommentDao) app.getBean("commentDaoImpl");
 		projectDao = (ProjectDao) app.getBean("projectDaoImpl");
 //		 org.hsqldb.util.DatabaseManagerSwing.main(new String[] { "--url",
-//		 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
+//				 "jdbc:hsqldb:mem:embeddedDataSource", "--noexit"});
 
 	}
-
 	@Test
-	public void create_and_getById_Test() {
-
-		Project project = new Project();
-		project.setName("one project");
-		project.setId((long) 90);
-		projectDao.create(project);
-		Project stored = projectDao.getById((long) 2);
-		assertEquals(project.getName(), stored.getName());
-
+	public void getCommentsByProject_Test() {
+		Project project = projectDao.getById((long) 1);
+		List<Comment> comments = commentDao.getAllCommentsOfProject(project);
+		assertEquals((Long)(long) 1, comments.get(0).getId());
 	}
-
-	@Test
-	public void getProjectsByCategory_Test() {
-		Category category = new Category();
-		category.setId((long) 5);
-		List<Project> projects = projectDao.getProjectsByCategory(category);
-		assertEquals("Create electrobike", projects.get(0).getName());
-	}
-	
-
 }

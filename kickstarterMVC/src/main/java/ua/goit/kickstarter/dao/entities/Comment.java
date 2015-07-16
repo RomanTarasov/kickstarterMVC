@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +16,7 @@ public class Comment {
 
 	@Id
 	@GeneratedValue
+	@Column(name = "id")
 	private Long id;
 
 	@Column(name = "text")
@@ -21,11 +24,45 @@ public class Comment {
 
 	@Column(name = "status")
 	private int status;
+
+	@ManyToOne
+	@JoinColumn(name = "project_id")
+	private Project project;
 	
-	@Column(name = "project_id")
-	private Long projectId;
+	@ManyToOne
+	@JoinColumn(name = "user_id" )
+	private User user;
 	
-	@Column(name = "user_id")
-	private Long userId;
+	public String getUserLogin(){
+		return user.getLogin();
+	}
+	
+	public Long getProjectId(){
+		return project.getId();
+	}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
 
 }

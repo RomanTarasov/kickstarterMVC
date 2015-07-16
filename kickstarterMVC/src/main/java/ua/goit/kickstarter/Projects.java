@@ -15,7 +15,7 @@ import ua.goit.kickstarter.dao.entities.Project;
 @Controller
 public class Projects {
 	@Autowired
-	ProjectDao projectDao;
+	private ProjectDao projectDao;
 
 	@RequestMapping(value = "/projects", method = RequestMethod.GET)
 	public String main(@RequestParam("category") long categoryId, Model model) {

@@ -53,7 +53,7 @@
 
 	<c:if test="${comments.size()>0}">
 		<c:forEach var="i" begin="0" end="${comments.size()-1}">
-			<c:out value="${listUsersNames.get(i)} : ${comments.get(i).comment}" />
+			<c:out value="${comments.get(i).getUserLogin()} : ${comments.get(i).text}" />
 			<br />
 		</c:forEach>
 
