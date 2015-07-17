@@ -18,7 +18,7 @@ public class Projects {
 	private ProjectDao projectDao;
 
 	@RequestMapping(value = "/projects", method = RequestMethod.GET)
-	public String main(@RequestParam("category") long categoryId, Model model) {
+	public String doGet(@RequestParam("category") long categoryId, Model model) {
 	
 		Category category = new Category();
 		category.setId(categoryId);

@@ -20,13 +20,8 @@ public class Main {
 	@Autowired
 	private CategoryDao categoryDao;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String rootToMain(Model model) {
-		return main(model);
-	}
-
-	@RequestMapping(value = "/main", method = RequestMethod.GET)
-	public String main(Model model) {
+	@RequestMapping(value = {"/","/main"}, method = RequestMethod.GET)
+	public String doGet(Model model) {
 		Quote randomQuote = quoteDao.getRandom();
 		model.addAttribute("quote", randomQuote);
 		List<Category> categories = categoryDao.getAllCategories();

@@ -23,7 +23,7 @@ public class DetailedProject {
 	private CommentDao commentDao;
 
 	@RequestMapping(value = "/DetailedProject", method = RequestMethod.GET)
-	public String main(@RequestParam("category") long categoryId,
+	public String doGet(@RequestParam("category") long categoryId,
 			@RequestParam("project") long projectId, Model model) {
 		
 		Project project = projectDao.getById(projectId);
